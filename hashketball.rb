@@ -176,3 +176,12 @@ def player_numbers(input)
 end
 return output
 end
+
+def team_names
+  game_hash.map do |team, team_info|
+    team_info[:team_name]
+  end
+end
+
+
+end
