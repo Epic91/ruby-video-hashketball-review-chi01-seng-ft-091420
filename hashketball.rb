@@ -160,6 +160,12 @@ def team_names
   team_info[:team_name]
 end
 
+def team_names
+  game_hash.map do |team, team_info|
+    team_info[:team_name]
+  end
+end
+
 def player_numbers(input)
   output = []
   game_hash.each do |team, team_info|
@@ -175,10 +181,4 @@ def player_numbers(input)
   end
 end
 return output
-end
-
-def team_names
-  game_hash.map do |team, team_info|
-    team_info[:team_name]
-  end
 end
